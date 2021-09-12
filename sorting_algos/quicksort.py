@@ -64,7 +64,9 @@ BE CAREFUL ABOUT INDEXING
 Doing arr[0:i] actually means you're indexing from 0 to i-1, it's not i
 inclusive, which is what messed up my partitioning 
 
-
+bottom might be worth checking out for interviews
+a bit inefficient though
+https://leetcode.com/problems/sort-an-array/discuss/277127/7-line-quicksort-to-write-in-interviews-(Python)
 
 
 '''
