@@ -55,3 +55,61 @@ class Solution:
         return root
 
 
+'''
+DFS Iterative Solution
+
+
+'''
+class Solution:
+    def connect(self, root):
+        if not root:
+            return 
+        stack = [root]
+        while stack:
+            curr = stack.pop()
+            if curr.left and curr.right:
+                curr.left.next = curr.right
+                if curr.next:
+                    curr.right.next = curr.next.left
+                stack.append(curr.right)
+                stack.append(curr.left)
+                
+        return root
+
+'''
+BFS Iterative Solution
+'''
+
+class Solution:    
+    def connect(self, root):
+        if not root:
+            return 
+        queue = [root]
+        
+        while queue:
+            curr = queue.pop()
+            if curr.left and curr.right:
+                curr.left.next = curr.right
+                if curr.next:
+                    curr.right.next = curr.next.left
+                queue.insert(0, curr.left)
+                queue.insert(0, curr.right)
+    
+        return root
+
+'''
+The beauty of the DFS and BFS iterative solutions are that they don't modify
+curr.next if it doesn't point to anything because they are already initialized as null.
+
+Just try quickly tracing through a depth 3 tree if you don't get why they work.
+How it all starts is at the root initially put into the queue. From the get go, 
+the bottom two are mapped to each other --> curr.left.next = curr.right
+so that after that happens, the code under the curr.next if statement can use that
+property to perform their operation. 
+
+
+Another cool thing is that because it checks for if curr.next exists, if curr.next exists, it knows
+it has access to the other side, so that it can access the curr.next.left node in order to map
+the right node on the left branch to th left node on the right branch. 
+
+'''
