@@ -1,0 +1,12 @@
+If you're taking an online assessment,
+
+Look at all the problems listed then see which
+ones you can solve quickly (usually you can tell just by)
+the descriptions and finish those quickly, then tackle the hard ones
+with the remaining time. 
+
+If something takes you like 15+ minutes, consider ditching it.
+
+Especially for the codesignal tests I've taken so far
+I need to first do the easy ones then the hard one. 
+
