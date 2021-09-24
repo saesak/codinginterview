@@ -9,6 +9,7 @@ def merge(leftarr, rightarr):
 
     #while either are not empty, continue to add in
     #elements
+    #USE OR NOOOOT AND
     while len(leftarr) != 0 or len(rightarr) !=0:
         if len(leftarr) != 0 and len(rightarr) !=0:
             if leftarr[0] <= rightarr[0]:
@@ -32,8 +33,8 @@ def mergesort(arr):
     
     mid =  int(round((n/2)))
 
-    leftarr = arr[0:mid]
-    rightarr = arr[mid+1:n-1]
+    leftarr = arr[0:mid]  #indexing in python like this returns 0 to mid-1
+    rightarr = arr[mid:n] #so start from mid here, end at n 
 
     #this progressively chunks the array down
     #until the array is all just 1 element arrays
