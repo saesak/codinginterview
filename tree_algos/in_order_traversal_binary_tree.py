@@ -11,17 +11,41 @@ class Node:
 
 #Recursive Version
 
-def recTraversal(root):
-    if root.left == None and root.right == None:
-        return root.val
-    #or can also add a if root != None statement
-    #so it doesn't go to the None ones
+class Solution(object):
+    def inorderTraversal(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[int]
+        """
+        res = []
+        
+        def recurse(root):
+            if root.left !=None:
+                recurse(root.left)
+            res.append(root.val)
+            if root.right !=None:
+                recurse(root.right)
+        
+        if root == None:
+            return []
+        
+        recurse(root)
+        
+        
+        
+        return res
 
-    recTraversal(root.left)
-    #do something to the nodes
-    recTraversal(root.right)
-    
-#Iterative Version
+'''
+Notice how there is no base case for this recursion
+
+It instead keeps putting calls on the stack and then 
+the call is resolved when it reaches the end of the function, since for
+this particular function the recursive function is not always called, but
+called only if there is another value to the left or right 
+so if both left and right are none, it is automatically resolved,
+and then the function starts resolving the other part of the other parts of the stack left
+'''
+
 
 def iterTraversal(root):
     #if we use append and pop for a list
