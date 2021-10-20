@@ -1,0 +1,75 @@
+>>> for key, value in a_dict.items():
+...     print(key, '->', value)
+...
+color -> blue
+fruit -> apple
+pet -> dog
+
+>>> for item in a_dict.items():
+...     print(item)
+...
+('color', 'blue')
+('fruit', 'apple')
+('pet', 'dog')
+
+>>> a_dict = {'color': 'blue', 'fruit': 'apple', 'pet': 'dog'}
+>>> for key in a_dict:
+...     print(key)
+...
+color
+fruit
+pet
+
+
+
+orders = {
+	'cappuccino': 54,
+	'latte': 56,
+	'espresso': 72,
+	'americano': 48,
+	'cortado': 41
+}
+
+sort_orders = sorted(orders.items(), key=lambda x: x[1], reverse=True)
+
+for i in sort_orders:
+	print(i[0], i[1])
+Our code returns the following:
+
+» MORE:  Python maximum recursion depth exceeded in comparison Solution
+espresso 72
+
+latte 56
+
+cappuccino 54
+
+americano 48
+
+cortado 41
+
+
+
+orders = {
+	'cappuccino': 54,
+	'latte': 56,
+	'espresso': 72,
+	'americano': 48,
+	'cortado': 41
+}
+
+sort_orders = sorted(orders.items(), key=lambda x: x[1])
+
+for i in sort_orders:
+	print(i[0], i[1])
+When we run our code, the following values are returned:
+
+» MORE:  Guide to Python Global and Local Variables
+cortado 41
+
+americano 48
+
+cappuccino 54
+
+latte 56
+
+espresso 72
