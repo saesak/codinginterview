@@ -2,11 +2,14 @@
 #Runtime -> O(n^2) average and worst case
 #Memory -> O(1)
 
+
+#this algo swaps stuff, bubbling things eventually to left or right based on how you want it.
+
 def bubblesort(arr):
     n = len(arr)
     for i in range(0, n):
         for j in range(0, n):
-            if j + 1 <= n - 1:
+            if j + 1 <= n - 1: #note that it is <=
                 if arr[j] > arr[j+1]:
                     arr[j], arr[j+1] = arr[j+1], arr[j]
 
