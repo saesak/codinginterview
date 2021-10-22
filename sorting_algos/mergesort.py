@@ -9,7 +9,7 @@ TEST IF THIS IS ACTUALLY CORRECT OR NOTTT!!!!!!!!
 
 '''
 #https://towardsdatascience.com/how-to-implement-merge-sort-algorithm-in-python-4662a89ae48c USES POINTERS NOT POPPING
-# https://www.educative.io/edpresso/merge-sort-in-python USES POINTERS AND USES ITERATION CHEKKITOUT
+# https://www.educative.io/edpresso/merge-sort-in-python uses pointers and does it all in one function 
 
 def merge(leftarr, rightarr):
             #helper array initialized for putting values into

@@ -53,3 +53,42 @@ class Solution:
         sortedarr = mergesort(nums)
         
         return sortedarr[-k]
+
+
+
+'''
+More concise pointer version 
+'''
+
+def merge(L, R):
+    tmp = []
+    
+    i, j = 0, 0
+    
+    while i < len(L) and j < len(R):
+        if L[i] < R[j]:
+            tmp.append(L[i])
+            i += 1
+        else:
+            tmp.append(R[j])
+            j += 1
+    
+    tmp.extend(L[i:])
+    tmp.extend(R[j:])
+    
+    return tmp
+
+
+def mergesort(nums):
+    
+    if len(nums) == 1:
+        return nums
+    
+    mid = len(nums) // 2
+    L = nums[:mid]
+    R = nums[mid:]
+    
+    L = mergesort(L)
+    R = mergesort(R)
+
+    return merge(L, R)

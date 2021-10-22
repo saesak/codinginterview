@@ -1,0 +1,14 @@
+Unpacking a function using positional argument.
+This method is very useful while printing your data in a raw format (without any comma and brackets ). Many of the programmer try to remove comma and bracket by using a convolution of functions, Hence this simple prefix asterisk can solve your problem in unpacking them.  
+Python3
+
+arr = ['sunday', 'monday', 'tuesday', 'wednesday']
+  
+# without using asterisk
+print(' '.join(map(str,arr))) 
+  
+# using asterisk
+print (*arr)
+
+
+https://www.geeksforgeeks.org/python-star-or-asterisk-operator/
