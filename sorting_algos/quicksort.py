@@ -11,7 +11,7 @@ def quicksort(arr):
         return arr
     n = len(arr) - 1
     
-    mid = int(round(n/2))
+    mid = n // 2
 
     arr[-1], arr[mid] = arr[mid], arr[-1]
 
@@ -70,3 +70,39 @@ https://leetcode.com/problems/sort-an-array/discuss/277127/7-line-quicksort-to-w
 
 
 '''
+
+'''
+more concise implementation
+'''
+
+def quicksort(nums):
+    if len(nums) == 1 or len(nums) == 0:
+        return nums
+    
+    n = len(nums) - 1
+    m = n // 2
+    
+    nums[-1], nums[m] = nums[m], nums[-1]
+    
+    i = 0
+    j = n-1
+    
+    while j >= i:
+        while nums[i] <= nums[-1] and j >= i:
+            i += 1
+
+        while nums[j] >= nums[-1] and j >= i:
+            j -= 1
+        
+        if j >= i:
+            nums[i], nums[j] = nums[j], nums[i]
+    
+    nums[i], nums[-1] = nums[-1], nums[i]
+    
+    left = nums[:i]
+    right = nums[i+1:]
+    
+    left = quicksort(left)
+    right = quicksort(right)
+    
+    return left + [nums[i]] + right

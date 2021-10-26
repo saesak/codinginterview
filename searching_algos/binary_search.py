@@ -9,7 +9,8 @@ class Solution:
             maxi = len(nums) - 1 
 
             while mini <= maxi:
-                mid = mini + (maxi - mini) // 2 
+                mid = mini + ((maxi - mini) // 2)  #this is done to prevent integer overflow issue, usually  (left + right) // 2 works fine as well
+                #if use (left + right) // 2 DONT FORGET THE PARENTHESIS OR IT GETS EXECUTED LIKE left + (right//2)
                 if nums[mid] == k:
                     return mid
                 if k > nums[mid]:
