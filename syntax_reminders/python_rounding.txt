@@ -1,0 +1,2 @@
+quick note --> int(number / number) rounds towards 0 in python
+the same way java, c++ do. 
