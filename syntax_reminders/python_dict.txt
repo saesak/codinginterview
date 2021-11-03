@@ -73,3 +73,17 @@ cappuccino 54
 latte 56
 
 espresso 72
+
+
+
+dictionary to list of items
+
+--> list(hi.items())
+
+goes from 
+
+hi = {'hi': 1, 'bi': 2}
+
+to 
+
+[('hi', 1), ('bi', 2)]

@@ -1,0 +1,3 @@
+x.isdigit()
+
+returns true or false based on whether x is a digit or not

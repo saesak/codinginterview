@@ -1,0 +1,8 @@
+can compare lexicographical order with <>
+
+ex. 'a' > 'b' returns False so gotta think of it other way around 
+like faster order means lesser of a value or something like that 
+
+more about it below
+
+https://careerkarma.com/blog/python-compare-strings/#:~:text=Python%20comparison%20operators%20can%20be,equal%20to%20(%20%3E%3D%20).
