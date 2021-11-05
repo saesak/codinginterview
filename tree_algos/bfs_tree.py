@@ -1,5 +1,12 @@
 #BFS
 
+
+'''
+BFS DFS ARE REALLY SIMILAR
+
+except BFS uses queue and DFS uses stack
+'''
+
 def bfs(root):
     if not root:
         #in case there's nothing given and root is just null

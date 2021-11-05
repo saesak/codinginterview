@@ -3,12 +3,13 @@ recursion solution, times out
 for long values 
 '''
 
+'''
+revisit
+'''
+
 class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
         
-        paths = [[1 for _ in range(n)] for _ in range(m)]
-        
-        #print(paths)
         
         def recurse(m,n):
             if m < 0 or n < 0:

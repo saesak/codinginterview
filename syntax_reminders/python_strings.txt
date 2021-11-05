@@ -1,0 +1,7 @@
+s = some string
+
+s.split('whatever you want to split it by, can't be nothing') 
+if you want to put each individual item of string into list, use list(s)
+
+to join:
+''.join(str_list)   '' at beginning is what you put between each element of the list

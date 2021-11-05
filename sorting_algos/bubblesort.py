@@ -9,8 +9,9 @@ def bubblesort(arr):
     n = len(arr)
     for i in range(0, n):
         for j in range(0, n):
-            if j + 1 <= n - 1: #note that it is <=
-                if arr[j] > arr[j+1]:
+            if j + 1 <= n - 1: #note that it is <=        
+                if arr[j] > arr[j+1]:   #this current implementation returns this in ascending order!!!!
+                    #descending would use <
                     arr[j], arr[j+1] = arr[j+1], arr[j]
 
     return arr

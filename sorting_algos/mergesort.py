@@ -85,10 +85,10 @@ def merge(L, R):
 
 def mergesort(nums):
     
-    if len(nums) == 1:
+    if len(nums) <= 1:
         return nums
     
-    mid = len(nums) // 2
+    mid = len(nums) // 2 #DONT FORGET THIS IS LEN(NUMS) // 2 DON'T CONSIDER INDEXING 
     L = nums[:mid]
     R = nums[mid:]
     

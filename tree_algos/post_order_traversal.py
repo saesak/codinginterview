@@ -4,7 +4,7 @@ def visit(root):
 
 #recursive 
 
-def post_order(root):
+def post_order(root): #remember it like this postorder so you visit after you do any recursion
     if root != None:
         post_order(root.left)
         post_order(root.right)

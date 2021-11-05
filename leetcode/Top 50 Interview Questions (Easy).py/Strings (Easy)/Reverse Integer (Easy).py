@@ -6,7 +6,9 @@ class Solution:
         n = len(str(x))
         for i in range(n):
             str_list.insert(i, str(x)[i])
-                
+
+        #or can just do list(x) --> list('321') returns ['3','2','1']
+
         str_list.reverse()
         
         if x < 0:

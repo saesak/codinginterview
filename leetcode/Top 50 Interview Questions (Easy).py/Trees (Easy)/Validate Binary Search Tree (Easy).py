@@ -4,6 +4,11 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
+'''
+REVISIT
+'''
+
 class Solution(object):
     
     def bsthelper(self, root, min_val, max_val):
@@ -29,7 +34,3 @@ class Solution(object):
         if root==None:
             return True
         return self.bsthelper(root, None, None)
-
-'''
-bad soln, find a better way 
-'''

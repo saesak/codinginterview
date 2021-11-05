@@ -27,3 +27,7 @@ class Solution:
             return binary_mod(nums, target)
         else:
             return -1
+
+'''
+QUICK REVISIT
+'''

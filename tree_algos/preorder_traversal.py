@@ -3,7 +3,7 @@
 def visit(root):
     print(visit.val)
 
-def preorder(root):
+def preorder(root):  #remember it like this preorder so you visit before you do any recursion
     visit(root)
     if root.left != None:
         preorder(root.left)
